@@ -1,4 +1,7 @@
-FROM ubuntu:latest
-LABEL authors="Sumire"
+FROM python:3.11
+LABEL authors="Josue Nava - Jimenez"
 
-ENTRYPOINT ["top", "-b"]
+WORKDIR /app
+
+COPY helloworld.py .
+CMD ["python", "helloworld.py"]
